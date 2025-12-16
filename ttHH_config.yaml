@@ -1,0 +1,29 @@
+General:
+  Measurement: "boostedttHH"
+  POI: "Signal_norm"
+  InputPath: "ttHH_ana_inputs.root:{RegionPath}/{SamplePath}"
+  HistogramFolder: "histogramsCabinetry/"
+
+Regions:
+  - Name: "SR"
+    RegionPath: "SR"
+
+Samples:
+  - Name: "data"
+    SamplePath: "data"
+    Data: True
+
+  - Name: "QCD"
+    SamplePath: "QCD muleijet"
+
+  #- Name: "ttbar"
+  #  SamplePath: "ttbar"
+
+  - Name: "ttHH"
+    SamplePath: "ttHH"
+
+NormFactors:
+  - Name: "Signal_norm"
+    Samples: "ttHH"
+    Nominal: 1
+    Bounds: [0,100]
